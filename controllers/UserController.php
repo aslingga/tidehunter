@@ -12,6 +12,7 @@ use yii\filters\VerbFilter;
 use app\models\Gallery;
 use app\models\Image;
 use yii\web\UploadedFile;
+use Codeception\Lib\Connector\Yii2;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -71,7 +72,7 @@ class UserController extends Controller
         $model = new UserForm();
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->image1 = UploadedFile::getInstance($model, 'image2');
+            $model->image1 = UploadedFile::getInstance($model, 'image1');
             $model->image2 = UploadedFile::getInstance($model, 'image2');
             
             if ($model->validate()) {
@@ -139,8 +140,50 @@ class UserController extends Controller
         $model->username = $user->username;
         $model->galleryType = $user->gallery->type;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->image1 = UploadedFile::getInstance($model, 'image1');
+            $model->image2 = UploadedFile::getInstance($model, 'image2');
+            
+            if ($model->validate()) {
+                $connection = \Yii::$app->db;
+                $transaction = $connection->beginTransaction();
+                
+                try {
+                    // create a new user
+                    $user->username = $model->username;
+                    $user->update();
+                    
+                    // create a new gallery
+                    $gallery = $user->gallery;
+                    $gallery->type = $model->galleryType;
+                    $gallery->update();
+                    
+                    $i = 1;
+                    foreach ($user->gallery->images as $row) {
+                        $oldFileName = $row->fileName;
+                        
+                        $row->imageFile = UploadedFile::getInstance($model, 'image' . $i);
+                        $row->upload();
+                        $row->update();
+                        
+                        unlink(getcwd() . DIRECTORY_SEPARATOR . 'uploads' .DIRECTORY_SEPARATOR . $oldFileName);
+                        
+                        $i++;
+                    }
+                    
+                    $transaction->commit();
+                }
+                catch (\Exception $e) {
+                    $transaction->rollBack();
+                    throw $e;
+                }
+                catch (\Throwable $e) {
+                    $transaction->rollBack();
+                    throw $e;
+                }
+                
+                return $this->redirect(['view', 'id' => $user->id]);
+            }
         }
 
         return $this->render('update', [
@@ -157,7 +200,29 @@ class UserController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $connection = \Yii::$app->db;
+        $transaction = $connection->beginTransaction();
+        
+        try {
+            Yii::setAlias('@root', realpath(dirname(__FILE__).'/../../'));
+            
+            $model = $this->findModel($id);
+            foreach ($model->gallery->images as $row) {
+                unlink(getcwd() . DIRECTORY_SEPARATOR . 'uploads' .DIRECTORY_SEPARATOR . $row->fileName);
+            }
+            
+            $model->delete();
+            
+            $transaction->commit();
+        }
+        catch (\Exception $e) {
+            $transaction->rollBack();
+            throw $e;
+        }
+        catch (\Throwable $e) {
+            $transaction->rollBack();
+            throw $e;
+        }
 
         return $this->redirect(['index']);
     }

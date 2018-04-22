@@ -1,8 +1,22 @@
+<h2>
+Instruction for setting up this project on your locahost
+</h2>
+
+THINGS TO DO
+-----------------
+You have to follow these instrcutions to deploy on your localhost:
+1. Project name: tidehunter
+2. Database name: tidehunter, use utf8_general_ci
+3. Pull this project. This project includes all the requirements so you don't have to install it by using composer anymore
+4. User list: http://localhost/tidehunter/web/index.php?r=user%2Findex
+5. Try to create a new user, update user, and delete user
+
+
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
     </a>
-    <h1 align="center">Yii 2 Basic Project Template</h1>
+    <h2 align="center">Yii 2 Basic Project Template</h2>
     <br>
 </p>
 

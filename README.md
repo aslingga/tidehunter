@@ -8,6 +8,9 @@ You have to follow these instrcutions to deploy on your localhost:
 3. Pull this project. This project includes all the requirements so you don't have to install it by using composer anymore
 4. User list: http://localhost/tidehunter/web/index.php?r=user%2Findex
 5. Try to create a new user, update user, and delete user
+6. Create a new user: You can create a new user with user form: username, gallery type, and 2 images
+7. Update user: You can update the user and can change the username, gallery type, and 2 images
+8. Delete user: You can delete the user and all dependency (includes 2 images)
 
 
 <p align="center">

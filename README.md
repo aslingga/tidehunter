@@ -2,8 +2,6 @@
 Instruction for setting up this project on your locahost
 </h2>
 
-THINGS TO DO
------------------
 You have to follow these instrcutions to deploy on your localhost:
 1. Project name: tidehunter
 2. Database name: tidehunter, use utf8_general_ci

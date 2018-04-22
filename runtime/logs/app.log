@@ -1,0 +1,3110 @@
+2018-04-20 06:36:58 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/mysql/Schema.php(114): yii\db\Command->queryColumn()
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Schema.php(237): yii\db\mysql\Schema->findTableNames('')
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/generators/model/Generator.php(161): yii\db\Schema->getTableNames()
+#10 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/components/ActiveField.php(41): call_user_func(Object(Closure))
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\gii\components\ActiveField->init()
+#13 [internal function]: yii\base\BaseObject->__construct(Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/ActiveForm.php(333): yii\BaseYii::createObject(Array)
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/generators/model/form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', '[<span class="s...')
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/views/default/view.php(37): yii\base\View->renderFile('/Users/aslingga...', Array)
+#22 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#23 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', '[<span class="s...')
+#24 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(yii\gii\controllers\DefaultController))
+#25 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#26 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(72): yii\base\Controller->render('view', Array)
+#27 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#28 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#29 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#30 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#31 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#32 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#34 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Command.php(442): yii\db\Command->queryInternal('fetchAll', 7)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/mysql/Schema.php(114): yii\db\Command->queryColumn()
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/Schema.php(237): yii\db\mysql\Schema->findTableNames('')
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/generators/model/Generator.php(161): yii\db\Schema->getTableNames()
+#8 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/components/ActiveField.php(41): call_user_func(Object(Closure))
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\BaseObject->__construct(Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/ActiveForm.php(333): yii\BaseYii::createObject(Array)
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/generators/model/form.php(9): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', '[<span class="s...')
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/views/default/view.php(37): yii\base\View->renderFile('/Users/aslingga...', Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', '[<span class="s...')
+#22 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(yii\gii\controllers\DefaultController))
+#23 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(72): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#27 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#28 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#29 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#32 {main}
+Additional Information:
+
+2018-04-20 06:36:57 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=gii'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '52432'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524206217.968
+    'REQUEST_TIME' => 1524206217
+    'argv' => [
+        0 => 'r=gii%2Fdefault%2Fview&id=model'
+    ]
+    'argc' => 1
+]
+2018-04-20 08:43:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserForm::password in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\base\Component->__get('password')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\UserForm), 'password')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1438): yii\helpers\BaseHtml::activeInput('password', Object(app\models\UserForm), 'password', Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/ActiveField.php(455): yii\helpers\BaseHtml::activePasswordInput(Object(app\models\UserForm), 'password', Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(17): yii\widgets\ActiveField->passwordInput(Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#8 /Users/aslingga/WebWorkspace/tidehunter/views/user/create.php(18): yii\base\View->render('_form', Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UserController))
+#13 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(75): yii\base\Controller->render('create', Array)
+#14 [internal function]: app\controllers\UserController->actionCreate()
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2018-04-20 08:43:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '53576'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524213781.804
+    'REQUEST_TIME' => 1524213781
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 08:43:22 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserForm::authKey in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\base\Component->__get('authKey')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\UserForm), 'authKey')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1377): yii\helpers\BaseHtml::activeInput('text', Object(app\models\UserForm), 'authKey', Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/ActiveField.php(404): yii\helpers\BaseHtml::activeTextInput(Object(app\models\UserForm), 'authKey', Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(19): yii\widgets\ActiveField->textInput(Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#8 /Users/aslingga/WebWorkspace/tidehunter/views/user/create.php(18): yii\base\View->render('_form', Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UserController))
+#13 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(75): yii\base\Controller->render('create', Array)
+#14 [internal function]: app\controllers\UserController->actionCreate()
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#21 {main}
+2018-04-20 08:43:22 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '53581'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524213802.165
+    'REQUEST_TIME' => 1524213802
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 09:30:44 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant multipart - assumed 'multipart' (this will throw an Error in a future version of PHP) in /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php:14
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(14): yii\base\ErrorHandler->handleError(2, 'Use of undefine...', '/Users/aslingga...', 14, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#4 /Users/aslingga/WebWorkspace/tidehunter/views/user/create.php(18): yii\base\View->render('_form', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UserController))
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(113): yii\base\Controller->render('create', Array)
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 09:30:43 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'SJN4w-NWE0WlX9kb8ogl6dvQsGfZkNqeTWAk6rE1yfZ42BGQmgxFAvQPiVimpUaO45jSLLbEtf0dE0ChiX-clQ=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => '5_qpQByhipzaICFzLGoJoDmGtbVmhMUZle.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpTyjBuX'
+            'image2' => '/Applications/MAMP/tmp/php/phpWg69vB'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 46718
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarygoBXi0Zj10J9TssI'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2623234'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '53933'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524216643.864
+    'REQUEST_TIME' => 1524216643
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 09:30:59 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\widgets\ActiveForm::enctype in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(546): yii\base\Component->__set('enctype', 'multipart/form-...')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\widgets\ActiveForm), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Act...', Array, Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Act...', Array, Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Widget.php(89): yii\BaseYii::createObject(Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(14): yii\base\Widget::begin(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#11 /Users/aslingga/WebWorkspace/tidehunter/views/user/create.php(18): yii\base\View->render('_form', Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UserController))
+#16 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(113): yii\base\Controller->render('create', Array)
+#17 [internal function]: app\controllers\UserController->actionCreate()
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#22 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#24 {main}
+2018-04-20 09:30:59 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'SJN4w-NWE0WlX9kb8ogl6dvQsGfZkNqeTWAk6rE1yfZ42BGQmgxFAvQPiVimpUaO45jSLLbEtf0dE0ChiX-clQ=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => '5_qpQByhipzaICFzLGoJoDmGtbVmhMUZle.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php479Giw'
+            'image2' => '/Applications/MAMP/tmp/php/php5UBUu3'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 46718
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundarygoBXi0Zj10J9TssI'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2623234'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '53935'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524216659.012
+    'REQUEST_TIME' => 1524216659
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 10:08:31 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: connection in /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php:75
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(75): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Users/aslingga...', 75, Array)
+#1 [internal function]: app\controllers\UserController->actionCreate()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-04-20 10:08:31 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '9Mle8z17kA-KWjjOYgud8sz93yCOS2G6uhuhZA3Z3tDEgjegRCHGSNsKaI02Jv6V9LW9a-EfDtnqaMUvNZOLsw=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php52N9Wg'
+            'image2' => '/Applications/MAMP/tmp/php/php0repOe'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary3oAtfVFRUPINAa5C'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152023'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '54298'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524218911.251
+    'REQUEST_TIME' => 1524218911
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 10:09:16 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:8192] yii\base\ErrorException: Non-static method yii\db\Connection::beginTransaction() should not be called statically in /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php:75
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(75): yii\base\ErrorHandler->handleError(8192, 'Non-static meth...', '/Users/aslingga...', 75, Array)
+#1 [internal function]: app\controllers\UserController->actionCreate()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-04-20 10:09:16 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '9Mle8z17kA-KWjjOYgud8sz93yCOS2G6uhuhZA3Z3tDEgjegRCHGSNsKaI02Jv6V9LW9a-EfDtnqaMUvNZOLsw=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpM8buvM'
+            'image2' => '/Applications/MAMP/tmp/php/phpvXlN9O'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary3oAtfVFRUPINAa5C'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152023'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '54301'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524218956.578
+    'REQUEST_TIME' => 1524218956
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 10:12:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserForm::name in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(80): yii\base\Component->__get('name')
+#1 [internal function]: app\controllers\UserController->actionCreate()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-04-20 10:12:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '9Mle8z17kA-KWjjOYgud8sz93yCOS2G6uhuhZA3Z3tDEgjegRCHGSNsKaI02Jv6V9LW9a-EfDtnqaMUvNZOLsw=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpdLOROe'
+            'image2' => '/Applications/MAMP/tmp/php/phpuJaGPA'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary3oAtfVFRUPINAa5C'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152023'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '54394'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524219121.104
+    'REQUEST_TIME' => 1524219121
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 10:12:19 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserForm::id in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(114): yii\base\Component->__get('id')
+#1 [internal function]: app\controllers\UserController->actionCreate()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-04-20 10:12:19 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '9Mle8z17kA-KWjjOYgud8sz93yCOS2G6uhuhZA3Z3tDEgjegRCHGSNsKaI02Jv6V9LW9a-EfDtnqaMUvNZOLsw=='
+    'UserForm' => [
+        'username' => 'angga'
+        'galleryType' => '0'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phphVxqHp'
+            'image2' => '/Applications/MAMP/tmp/php/phpeukPgc'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary3oAtfVFRUPINAa5C'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152023'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '54397'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524219139.068
+    'REQUEST_TIME' => 1524219139
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 10:44:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant imageFile - assumed 'imageFile' (this will throw an Error in a future version of PHP) in /Users/aslingga/WebWorkspace/tidehunter/models/Image.php:56
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/models/Image.php(56): yii\base\ErrorHandler->handleError(2, 'Use of undefine...', '/Users/aslingga...', 56, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(93): app\models\Image->upload()
+#2 [internal function]: app\controllers\UserController->actionCreate()
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2018-04-20 10:44:01 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'sTTL7jaTat6i1i4f5qyxyN56TRPEmuzWQ1EJZ6WrXRKBf6K9T8k8mfOGflyygdKv5jIvWKvOg7UTIm0sneEIcQ=='
+    'UserForm' => [
+        'username' => 'asd'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => ''
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => ''
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php5yhknG'
+            'image2' => ''
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 4
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 0
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryPkmEmyRSEPVgbm85'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2576492'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '54534'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524221041.049
+    'REQUEST_TIME' => 1524221041
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 12:57:30 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: app\models\UserForm::imageFile in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(74): yii\base\Component->__set('imageFile', Object(yii\web\UploadedFile))
+#1 [internal function]: app\controllers\UserController->actionCreate()
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-04-20 12:57:30 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'ZNhU7RC8krEetsD7WE_w0do3A2RZBKtO5idyEJR6F9pUkz2-aebE9k_mkLgMYpO24n9hLzZQxC22VBZbrDBCuQ=='
+    'UserForm' => [
+        'username' => 'Assad'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php9USw5p'
+            'image2' => '/Applications/MAMP/tmp/php/phpxPx2ZO'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary2MnBeUNNbAAfOYyt'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152029'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '55937'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229050.455
+    'REQUEST_TIME' => 1524229050
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:04:49 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpMspxv0): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #147, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:04:49 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_LUxxvb5FaepSrd3QW_OtU_VxSiBv-zlZN_wu6oMZW7M_liVj6ND4Pga5zQVQq3Sd52nY-7rg4Y0rJTwkkYwDQ=='
+    'UserForm' => [
+        'username' => 'sdadaewfad'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpMspxv0'
+            'image2' => '/Applications/MAMP/tmp/php/phpheDTsV'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary6HoLHH5BWOymLLXz'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152030'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56010'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229489.325
+    'REQUEST_TIME' => 1524229489
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:05:05 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: date() expects at least 1 parameter, 0 given in /Users/aslingga/WebWorkspace/tidehunter/models/Image.php:60
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', '/Users/aslingga...', 60, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/models/Image.php(60): date()
+#2 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(97): app\models\Image->upload()
+#3 [internal function]: app\controllers\UserController->actionCreate()
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2018-04-20 13:05:05 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_LUxxvb5FaepSrd3QW_OtU_VxSiBv-zlZN_wu6oMZW7M_liVj6ND4Pga5zQVQq3Sd52nY-7rg4Y0rJTwkkYwDQ=='
+    'UserForm' => [
+        'username' => 'sdadaewfad'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpr0Fbsd'
+            'image2' => '/Applications/MAMP/tmp/php/phps1qDQG'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary6HoLHH5BWOymLLXz'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152030'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56013'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229505.177
+    'REQUEST_TIME' => 1524229505
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:05:11 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/php4mIDFj): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #147, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:05:11 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_LUxxvb5FaepSrd3QW_OtU_VxSiBv-zlZN_wu6oMZW7M_liVj6ND4Pga5zQVQq3Sd52nY-7rg4Y0rJTwkkYwDQ=='
+    'UserForm' => [
+        'username' => 'sdadaewfad'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php4mIDFj'
+            'image2' => '/Applications/MAMP/tmp/php/php0IqqHL'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary6HoLHH5BWOymLLXz'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152030'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56014'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229511.622
+    'REQUEST_TIME' => 1524229511
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:05:30 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpvDNvlr): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #147, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:05:30 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'QZXZrBLwNKZRVi1PhMfWU_cblCO6eLkS5FXgSoMLd1tx3rD_a6pi4QAGfQzQ6rU0z1P2aNUs1nG0JoQBu0EiOA=='
+    'UserForm' => [
+        'username' => 'afadajdssalk'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpvDNvlr'
+            'image2' => '/Applications/MAMP/tmp/php/phpZ0Ajco'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryyC4bUnuCbxTK0A4p'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152032'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56017'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229529.958
+    'REQUEST_TIME' => 1524229529
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:05:39 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/php0sN0H0): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #147, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:05:39 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'QZXZrBLwNKZRVi1PhMfWU_cblCO6eLkS5FXgSoMLd1tx3rD_a6pi4QAGfQzQ6rU0z1P2aNUs1nG0JoQBu0EiOA=='
+    'UserForm' => [
+        'username' => 'afadajdssalk'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php0sN0H0'
+            'image2' => '/Applications/MAMP/tmp/php/php5t4oPx'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryyC4bUnuCbxTK0A4p'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152032'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56018'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229539.838
+    'REQUEST_TIME' => 1524229539
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:06:15 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpieNfcz): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:06:15 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_qsND_1pqV-_VF-iKKtn1_rycyKmcQKctT2SOx4CKGLO4GRchDP_GO4ED-F8hgSwwroRacklbf_lTvZwJkh9AQ=='
+    'UserForm' => [
+        'username' => 'aslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpieNfcz'
+            'image2' => '/Applications/MAMP/tmp/php/phpoUpf1i'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryvvA82ZOpb1p9oiXS'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152032'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56037'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229575.681
+    'REQUEST_TIME' => 1524229575
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:06:23 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpttvejd): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:06:23 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_qsND_1pqV-_VF-iKKtn1_rycyKmcQKctT2SOx4CKGLO4GRchDP_GO4ED-F8hgSwwroRacklbf_lTvZwJkh9AQ=='
+    'UserForm' => [
+        'username' => 'aslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => '5_qpQByhipzaICFzLGoJoDmGtbVmhMUZle.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpttvejd'
+            'image2' => '/Applications/MAMP/tmp/php/php41Y6hx'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 46718
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryldpl5kALvj02OUOT'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2623243'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56038'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229583.69
+    'REQUEST_TIME' => 1524229583
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:10:14 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: move_uploaded_file(uploads/IMAGE_5ad9e6b607bed-04/20/2018 01:10:14 pm.jpg): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/UploadedFile.php:164
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'move_uploaded_f...', '/Users/aslingga...', 164, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/UploadedFile.php(164): move_uploaded_file('/Applications/M...', 'uploads/IMAGE_5...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/models/Image.php(63): yii\web\UploadedFile->saveAs('uploads/IMAGE_5...')
+#3 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(97): app\models\Image->upload()
+#4 [internal function]: app\controllers\UserController->actionCreate()
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#11 {main}
+2018-04-20 13:10:13 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_qsND_1pqV-_VF-iKKtn1_rycyKmcQKctT2SOx4CKGLO4GRchDP_GO4ED-F8hgSwwroRacklbf_lTvZwJkh9AQ=='
+    'UserForm' => [
+        'username' => 'aslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => '5_qpQByhipzaICFzLGoJoDmGtbVmhMUZle.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phprQi13d'
+            'image2' => '/Applications/MAMP/tmp/php/phpgrdnxZ'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 46718
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryldpl5kALvj02OUOT'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2623243'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56133'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229813.833
+    'REQUEST_TIME' => 1524229813
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:10:52 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpQFs0S5): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:10:52 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '_qsND_1pqV-_VF-iKKtn1_rycyKmcQKctT2SOx4CKGLO4GRchDP_GO4ED-F8hgSwwroRacklbf_lTvZwJkh9AQ=='
+    'UserForm' => [
+        'username' => 'aslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => '5_qpQByhipzaICFzLGoJoDmGtbVmhMUZle.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpQFs0S5'
+            'image2' => '/Applications/MAMP/tmp/php/phpCbGKhF'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 46718
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryldpl5kALvj02OUOT'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '2623243'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56136'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229852.209
+    'REQUEST_TIME' => 1524229852
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:11:12 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpb8lcJL): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:11:12 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => 'DsQp-959zi_3L5MEo7WAtRufw7tGW9X3JwY33OmlwPI-j0CopyeYaKZ_w0f3mOPSI9eh8CkPupR3dVOX0e-VkQ=='
+    'UserForm' => [
+        'username' => 'anggasl'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpb8lcJL'
+            'image2' => '/Applications/MAMP/tmp/php/phpOmffUy'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryHHfvw4jMFLie18Tg'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152027'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56139'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229872.422
+    'REQUEST_TIME' => 1524229872
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:13:17 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/php6aweV5): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:13:17 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '4qmQ9DkUM2Ixbg7czS0DL4FOb148o08Wjabqi0vaGBXS4vmnQE5lJWA-Xp-ZAGBIuQYNFVP3IHXd1Y7Ac5BNdg=='
+    'UserForm' => [
+        'username' => 'anggaslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/php6aweV5'
+            'image2' => '/Applications/MAMP/tmp/php/php7lH440'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryrFBfJBCwZqufVsBZ'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152036'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56149'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524229997.334
+    'REQUEST_TIME' => 1524229997
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:13:53 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: finfo_file(/Applications/MAMP/tmp/php/phpmY67P6): failed to open stream: No such file or directory in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php:158
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'finfo_file(/App...', '/Users/aslingga...', 158, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseFileHelper.php(158): finfo_file(Resource id #149, '/Applications/M...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(403): yii\helpers\BaseFileHelper::getMimeType('/Applications/M...', NULL, false)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(296): yii\validators\FileValidator->validateExtension(Object(yii\web\UploadedFile))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/FileValidator.php(242): yii\validators\FileValidator->validateValue(Object(yii\web\UploadedFile))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\FileValidator->validateAttribute(Object(app\models\Image), 'imageFile')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\Image), Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/ActiveRecord.php(509): yii\base\Model->validate(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(670): yii\db\ActiveRecord->insert(true, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(98): yii\db\BaseActiveRecord->save()
+#10 [internal function]: app\controllers\UserController->actionCreate()
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/create', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#17 {main}
+2018-04-20 13:13:53 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/create'
+]
+
+$_POST = [
+    '_csrf' => '4qmQ9DkUM2Ixbg7czS0DL4FOb148o08Wjabqi0vaGBXS4vmnQE5lJWA-Xp-ZAGBIuQYNFVP3IHXd1Y7Ac5BNdg=='
+    'UserForm' => [
+        'username' => 'anggaslingga'
+        'galleryType' => 'Fiction'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpmY67P6'
+            'image2' => '/Applications/MAMP/tmp/php/phpo9GKl2'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryrFBfJBCwZqufVsBZ'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'CONTENT_LENGTH' => '5152036'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56151'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fcreate'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fcreate'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524230033.443
+    'REQUEST_TIME' => 1524230033
+    'argv' => [
+        0 => 'r=user%2Fcreate'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:27:20 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php:37
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php(37): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Users/aslingga...', 37, Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\User), Object(yii\widgets\DetailView))
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/DetailView.php(245): call_user_func(Object(Closure), Object(app\models\User), Object(yii\widgets\DetailView))
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/DetailView.php(143): yii\widgets\DetailView->normalizeAttributes()
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\widgets\DetailView->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Widget.php(137): yii\BaseYii::createObject(Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php(40): yii\base\Widget::widget(Array)
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UserController))
+#15 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(60): yii\base\Controller->render('view', Array)
+#16 [internal function]: app\controllers\UserController->actionView('46')
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/view', Array)
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#23 {main}
+2018-04-20 13:27:20 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/view'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56394'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fview&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524230840.353
+    'REQUEST_TIME' => 1524230840
+    'argv' => [
+        0 => 'r=user%2Fview&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:37:35 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][Error] Error: Call to undefined method Yii::app() in /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php:13
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require()
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UserController))
+#4 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(60): yii\base\Controller->render('view', Array)
+#5 [internal function]: app\controllers\UserController->actionView('46')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/view', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#12 {main}
+2018-04-20 13:37:35 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/view'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56547'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fview&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524231455.012
+    'REQUEST_TIME' => 1524231455
+    'argv' => [
+        0 => 'r=user%2Fview&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:37:42 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][Error] Error: Call to undefined method Yii::app() in /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php:13
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require()
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UserController))
+#4 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(60): yii\base\Controller->render('view', Array)
+#5 [internal function]: app\controllers\UserController->actionView('46')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/view', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#12 {main}
+2018-04-20 13:37:42 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/view'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56550'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fview&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524231462.074
+    'REQUEST_TIME' => 1524231462
+    'argv' => [
+        0 => 'r=user%2Fview&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:37:51 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: yii\web\Application::clientScript in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/ServiceLocator.php(77): yii\base\Component->__get('clientScript')
+#1 /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php(13): yii\di\ServiceLocator->__get('clientScript')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UserController))
+#6 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(60): yii\base\Controller->render('view', Array)
+#7 [internal function]: app\controllers\UserController->actionView('46')
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/view', Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#14 {main}
+2018-04-20 13:37:51 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/view'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56553'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fview&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524231471.818
+    'REQUEST_TIME' => 1524231471
+    'argv' => [
+        0 => 'r=user%2Fview&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:38:32 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\ErrorException:2] yii\base\ErrorException: count(): Parameter must be an array or an object that implements Countable in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php:1903
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'count(): Parame...', '/Users/aslingga...', 1903, Array)
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1903): count('\n     .user-ima...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(150): yii\helpers\BaseHtml::renderTagAttributes('\n     .user-ima...')
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(201): yii\helpers\BaseHtml::tag('style', 'user-detail', '\n     .user-ima...')
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/View.php(405): yii\helpers\BaseHtml::style('user-detail', '\n     .user-ima...')
+#5 /Users/aslingga/WebWorkspace/tidehunter/views/user/view.php(13): yii\web\View->registerCss('user-detail', '\n     .user-ima...')
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UserController))
+#10 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(60): yii\base\Controller->render('view', Array)
+#11 [internal function]: app\controllers\UserController->actionView('46')
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/view', Array)
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#18 {main}
+2018-04-20 13:38:32 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/view'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fcreate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56561'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fview&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524231512.207
+    'REQUEST_TIME' => 1524231512
+    'argv' => [
+        0 => 'r=user%2Fview&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:41:47 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\User::galleryType in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get('galleryType')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\db\BaseActiveRecord->__get('galleryType')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1792): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\User), 'galleryType')
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/helpers/BaseHtml.php(1630): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\User), 'galleryType', Array, Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/widgets/ActiveField.php(651): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\User), 'galleryType', Array, Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(17): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#9 /Users/aslingga/WebWorkspace/tidehunter/views/user/update.php(18): yii\base\View->render('_form', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('update', Array, Object(app\controllers\UserController))
+#14 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(143): yii\base\Controller->render('update', Array)
+#15 [internal function]: app\controllers\UserController->actionUpdate('46')
+#16 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('update', Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/update', Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#22 {main}
+2018-04-20 13:41:47 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/update'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56611'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fupdate&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524231707.411
+    'REQUEST_TIME' => 1524231707
+    'argv' => [
+        0 => 'r=user%2Fupdate&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:46:54 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\UserForm::id in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/views/user/update.php(10): yii\base\Component->__get('id')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('update', Array, Object(app\controllers\UserController))
+#5 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(146): yii\base\Controller->render('update', Array)
+#6 [internal function]: app\controllers\UserController->actionUpdate('46')
+#7 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('update', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/update', Array)
+#11 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#13 {main}
+2018-04-20 13:46:54 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/update'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56663'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fupdate&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524232014.86
+    'REQUEST_TIME' => 1524232014
+    'argv' => [
+        0 => 'r=user%2Fupdate&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:50:00 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\widgets\ActiveForm::layout in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(546): yii\base\Component->__set('layout', 'horizontal')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\widgets\ActiveForm), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Act...', Array, Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Act...', Array, Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Widget.php(89): yii\BaseYii::createObject(Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(13): yii\base\Widget::begin(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#11 /Users/aslingga/WebWorkspace/tidehunter/views/user/update.php(18): yii\base\View->render('_form', Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('update', Array, Object(app\controllers\UserController))
+#16 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(147): yii\base\Controller->render('update', Array)
+#17 [internal function]: app\controllers\UserController->actionUpdate('46')
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('update', Array)
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/update', Array)
+#22 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#24 {main}
+2018-04-20 13:50:00 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/update'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56728'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fupdate&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524232200.86
+    'REQUEST_TIME' => 1524232200
+    'argv' => [
+        0 => 'r=user%2Fupdate&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:51:03 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\widgets\ActiveForm::layout in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(546): yii\base\Component->__set('layout', 'horizontal')
+#1 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/BaseObject.php(107): yii\BaseYii::configure(Object(yii\widgets\ActiveForm), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(383): ReflectionClass->newInstanceArgs(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\widgets\\Act...', Array, Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Act...', Array, Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Widget.php(89): yii\BaseYii::createObject(Array)
+#7 /Users/aslingga/WebWorkspace/tidehunter/views/user/_form.php(13): yii\base\Widget::begin(Array)
+#8 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#9 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#10 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, NULL)
+#11 /Users/aslingga/WebWorkspace/tidehunter/views/user/update.php(18): yii\base\View->render('_form', Array)
+#12 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(336): require('/Users/aslingga...')
+#13 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/Users/aslingga...', Array)
+#14 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/Users/aslingga...', Array, Object(app\controllers\UserController))
+#15 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('update', Array, Object(app\controllers\UserController))
+#16 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(147): yii\base\Controller->render('update', Array)
+#17 [internal function]: app\controllers\UserController->actionUpdate('46')
+#18 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#19 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('update', Array)
+#21 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/update', Array)
+#22 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#24 {main}
+2018-04-20 13:51:02 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/update'
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fview&id=46'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56741'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fupdate&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524232262.919
+    'REQUEST_TIME' => 1524232262
+    'argv' => [
+        0 => 'r=user%2Fupdate&id=46'
+    ]
+    'argc' => 1
+]
+2018-04-20 13:54:11 [::1][-][1dq6ntb36087ddivjimkrsptvn][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: app\models\UserForm::save() in /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /Users/aslingga/WebWorkspace/tidehunter/controllers/UserController.php(142): yii\base\Component->__call('save', Array)
+#1 [internal function]: app\controllers\UserController->actionUpdate('46')
+#2 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('update', Array)
+#5 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/update', Array)
+#6 /Users/aslingga/WebWorkspace/tidehunter/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Users/aslingga/WebWorkspace/tidehunter/web/index.php(14): yii\base\Application->run()
+#8 {main}
+2018-04-20 13:54:10 [::1][-][1dq6ntb36087ddivjimkrsptvn][info][application] $_GET = [
+    'r' => 'user/update'
+    'id' => '46'
+]
+
+$_POST = [
+    '_csrf' => '6zrgT7XrDGsPXswCf79Vo6Pm_aP1HhphfNqZrlPbZTTbcYkczLFaLF4OnEErkjbEm66f6JpKdQIsqf3la5EwVw=='
+    'UserForm' => [
+        'username' => 'anggal'
+        'galleryType' => 'Art'
+        'image1' => ''
+        'image2' => ''
+    ]
+]
+
+$_FILES = [
+    'UserForm' => [
+        'name' => [
+            'image1' => 'brandi-redd-414738-unsplash.jpg'
+            'image2' => 'brandi-redd-414738-unsplash.jpg'
+        ]
+        'type' => [
+            'image1' => 'image/jpeg'
+            'image2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'image1' => '/Applications/MAMP/tmp/php/phpOS4pI8'
+            'image2' => '/Applications/MAMP/tmp/php/phpbCwmxo'
+        ]
+        'error' => [
+            'image1' => 0
+            'image2' => 0
+        ]
+        'size' => [
+            'image1' => 2575514
+            'image2' => 2575514
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1dq6ntb36087ddivjimkrsptvn'
+    '_csrf' => 'e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-us'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryJzfXS3QXyPGjKPnM'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_REFERER' => 'http://localhost/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'CONTENT_LENGTH' => '5152026'
+    'HTTP_COOKIE' => 'PHPSESSID=1dq6ntb36087ddivjimkrsptvn; _csrf=e33c9899d77f6f6d0a784c8a5220c77f0d0cf97aeb58ad7709fb08d6c4e3fcf5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220KiSyZVGQPPCT-cg8HbKoTocPsdK8JUc%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.1 mod_ssl/2.2.34 OpenSSL/1.0.2j DAV/2 mod_fastcgi/2.4.6 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/aslingga/WebWorkspace'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/aslingga/WebWorkspace/tidehunter/web/index.php'
+    'REMOTE_PORT' => '56770'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fupdate&id=46'
+    'REQUEST_URI' => '/tidehunter/web/index.php?r=user%2Fupdate&id=46'
+    'SCRIPT_NAME' => '/tidehunter/web/index.php'
+    'PHP_SELF' => '/tidehunter/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524232450.885
+    'REQUEST_TIME' => 1524232450
+    'argv' => [
+        0 => 'r=user%2Fupdate&id=46'
+    ]
+    'argc' => 1
+]
